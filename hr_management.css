@@ -19,10 +19,12 @@
   border:none;
 }
 
+
 @font-face {
 font-family: myFamily;
  src:url('./Futura Medium.otf');
 }
+
 @font-face {
   font-family:FuturaBold;
   src:url('./Futura Bold.otf');
@@ -35,6 +37,7 @@ body{
 }
 .logoSize{
   font-size: 35px;
+    color:#6672fb;
 }
 
 .avtar{
@@ -50,9 +53,12 @@ body{
 .board{
   width:250px !important;
 }
+.a1{
+  background-color: #6672fb;
+}
 .a1:hover{
   background-color: white;
-  color:blue;
+  color:#6672fb;
 }
  .badge {
   position: absolute;
@@ -63,4 +69,11 @@ body{
   border-radius: 50%;
   background-color: red;
   color: white;
+}
+.active{
+  color:#6672fb !important;
+  background-color: #f6f5f4 !important;
+
+  border-left: 5px;
+  border-color: #6672fb;
 }

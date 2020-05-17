@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./hr_management.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>Hr Management</title>
   </head>
   <body>
@@ -18,24 +20,24 @@
               <p class="mt-0 mb-0 font-weight-bold">Management</p>
             </div>
         </div>
-        <div class="col-md-6 border-right border-bottom search pt-md-3">
+        <div class="col-md-6 border-right border-bottom search pt-lg-3">
             <i class="fas fa-search pl-3"></i>
             <input  class="pl-5 pr-5 pt-2 pb-2 rounded-sm" type="text" placeholder="Search for employee/project" name="" value="">
         </div>
         <div class="col-md-1 border-right border-bottom text-center">
-            <i class=" far pt-md-4 fa-bell" style="font-size:30px;position:"absolute"">
+            <i class=" far pt-lg-4 fa-bell" style="font-size:30px;position:"absolute"">
             <span class="badge  p-0">&nbsp;</span>
             </i>
         </div>
         <div class="col-md-1 border-right border-bottom text-center ">
             <i class="far fa-comment-alt pt-4" style="font-size:30px"></i>
         </div>
-        <div class="col-md-2 d-flex border-right border-bottom flex-row pt-md-3">
+        <div class="col-md-2 d-flex border-right border-bottom flex-row pt-lg-3">
             <img src="./images/lady.png" alt="lady avtar" class="avtar ">
-            <div class="dropdown pl-md-3 pt-md-2">
+            <div class="dropdown pl-lg-3 pt-lg-2">
               <button id="dropdown" href="#" class=" btn d-flex flex-row" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="">Eliza Hart</span>
-                <span class=" mt-1 pl-3 fas fa-chevron-down " style="font-size:20px"></span>
+                <span class="" style="color:#6672fb;">Eliza Hart</span>
+                <span class=" mt-1 pl-3 fas fa-chevron-down " style="font-size:20px;  color:#6672fb;"></span>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdown">
                 <a href="#" class="dropdown-item">Action</a>
@@ -47,15 +49,52 @@
       </div>
       <!-- row content -->
       <div class="row">
-        <div class="col-md-2 bg-success">
-          dddd
+        <div class="col-md-2 mt-lg-5 ">
+          <div class="nav flex-column nav-pills" id="vertical tab" role="tablist" aria-orientation="vertical" >
+            <a href="#dashboard" style="color:#6c757d" class="d-flex flex-row nav-link active" data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
+              <i id="home" class="material-icons" style="color:red">home</i>
+              Dashboard
+            </a>
+            <a href="#employees" id="emp" style="color:#6c757d" class=" nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
+
+              Employees
+            </a>
+            <a href="#employees" style="color:#6c757d" class="nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
+
+              Clients
+            </a>
+            <a href="#employees" style="color:#6c757d" class="nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
+              <i class="far fa-star"></i>
+              Projects
+            </a>
+            <a href="#employees" style="color:#6c757d" class="nav-link" data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
+
+              Policies
+            </a>
+            <a href="#employees" style="color:#6c757d" class="nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
+
+              Accounts
+            </a>
+            <a href="#employees" style="color:#6c757d" class="nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
+
+              Payrolls
+            </a>
+            <a href="#employees" style="color:#6c757d" class="nav-link" data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
+
+              Reports
+            </a>
+            <a href="#employees" style="color:#6c757d" class="nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
+
+              Settings
+            </a>
+          </div>
         </div>
         <div class="col-md-6  col_color">
           ddddd
         </div>
         <div class="col-md-4 pl-5 col_color pr-5 pb-5">
           <!-- Attendence -->
-          <div class="row  mt-md-4 ">
+          <div class="row  mt-lg-4 ">
             <div class="card  shadow-sm border-0">
               <div class="d-flex flex-row  border-right">
                 <div class=" border d-flex flex-column board text-center pt-2 pb-2">
@@ -97,7 +136,7 @@
               </div>
             </div>
             <!-- employees on holiday -->
-            <div class="row  mt-md-3">
+            <div class="row  mt-lg-3">
               <div class="col-md-12 card shadow-sm">
                 <div class="mt-4 ml-3">
                   <h6 class="card-title mt-2 logo ">
@@ -110,7 +149,7 @@
                           <p class="font-weight-bold mb-0">Francis Tran</p>
                           <small class="text-secondary">Health is not good.</small>
                       </div>
-                      <small class="text-danger pl-5 pt-2 font-weight-bold">
+                      <small class="text-danger pl-lg-5 pt-lg-2 font-weight-bold">
                         Only Today
                       </small>
                     </div>
@@ -153,6 +192,11 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+    document.addEventListener("click", function(){
+  console.log(document.getElementById("home").style="color:blue");
+      });
+    </script>
     <script src="https://kit.fontawesome.com/0295f823fc.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
