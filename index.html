@@ -9,8 +9,8 @@
       rel="stylesheet">
     <title>Hr Management</title>
   </head>
-  <body>
-    <div class="container-fluid pb-5">
+  <body class="">
+    <div class="d-none d-lg-block d-xl-block container-fluid pb-5">
       <!-- row navbar -->
       <div class="row ">
         <div class="col-md-2  border-right border-bottom d-flex flex-row logo">
@@ -49,48 +49,92 @@
       </div>
       <!-- row content -->
       <div class="row">
-        <div class="col-md-2 mt-lg-5 ">
+        <div class="col-md-2 mt-lg-3 ">
           <div class="nav flex-column nav-pills" id="vertical tab" role="tablist" aria-orientation="vertical" >
-            <a href="#dashboard" style="color:#6c757d" class="d-flex flex-row nav-link active" data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
-              <i id="home" class="material-icons" style="color:red">home</i>
+            <a id="home" href="#dashboard" style="color:#6c757d" class="mt-3  d-flex flex-row nav-link active" data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
+              <i    class="mr-3  material-icons" >home</i>
               Dashboard
             </a>
-            <a href="#employees" id="emp" style="color:#6c757d" class=" nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
-
+            <a href="#employees" id="emp" style="color:#6c757d" class="mt-3 d-flex flex-row nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="false" >
+              <i  class="material-icons mr-3" >person</i>
               Employees
             </a>
-            <a href="#employees" style="color:#6c757d" class="nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
-
+            <a id="clients" href="#Clients" style="color:#6c757d" class="mt-3 d-flex flex-row nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="false" >
+              <i  class="material-icons mr-3" >local_mall</i>
               Clients
             </a>
-            <a href="#employees" style="color:#6c757d" class="nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
-              <i class="far fa-star"></i>
+            <a  id="projects" href="#Projects" style="color:#6c757d" class="mt-3 d-flex flex-row nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="false" >
+                <i  class="material-icons mr-3" >stars</i>
               Projects
             </a>
-            <a href="#employees" style="color:#6c757d" class="nav-link" data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
-
+            <a id="policies" href="#Policies" style="color:#6c757d" class="mt-3 d-flex flex-row nav-link" data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="false" >
+                <i  class="material-icons mr-3" >info</i>
               Policies
             </a>
-            <a href="#employees" style="color:#6c757d" class="nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
-
+            <a id="accounts" href="#Accounts" style="color:#6c757d" class="mt-3 d-flex flex-row nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="false" >
+              <i class="material-icons mr-3">folder</i>
               Accounts
             </a>
-            <a href="#employees" style="color:#6c757d" class="nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
-
+            <a  id="payrolls" href="#Payrolls" style="color:#6c757d" class="mt-3 d-flex flex-row nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="false" >
+              <i  class="material-icons mr-3" >local_atm</i>
               Payrolls
             </a>
-            <a href="#employees" style="color:#6c757d" class="nav-link" data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
-
+            <a id="reports" href="#Reports" style="color:#6c757d" class="mt-3 d-flex flex-row nav-link" data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="false" >
+              <i  class="material-icons mr-3" >bar_chart</i>
               Reports
             </a>
-            <a href="#employees" style="color:#6c757d" class="nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="true" >
-
+            <a id="settings" href="#Settings" style="color:#6c757d" class=" mt-3 d-flex flex-row nav-link " data-toggle="pill" role="tab" aria-controls="dashboard" aria-selected="false" >
+              <i  class="material-icons mr-3">settings</i>
               Settings
             </a>
           </div>
         </div>
-        <div class="col-md-6  col_color">
-          ddddd
+        <div  class="col-md-6  col_color">
+          <div class="tab=content" id="tab-content" >
+            <div class=" tab-pane fade show active pl-3" id="dashboard" role="tabpanel" aria-labelledby="home">
+                <h4 class="font-weight-bold logo text-dark pt-4">
+                    Welcome Eliza Hart!
+                </h4>
+                <p class="text-dark">
+                  The salary of Kathryn Webster is pending since 15 December.
+                  <a href="#" class="text-danger">Learn More</a>
+                </p>
+                <div class="row">
+                  <div class="col-md-6 bg-dark">
+                    <div class="card">
+
+                    </div>
+                  </div>
+                  <div class="col-md-6  bg-success">
+                    ddddddd
+                  </div>
+                </div>
+            </div>
+            <div class=" tab-pane fade text-dark " id="employees" role="tabpanel" aria-labelledby="emp">
+                hello world
+            </div>
+            <div class=" tab-pane fade text-dark " id="Clients" role="tabpanel" aria-labelledby="clients">
+                hello world
+            </div>
+            <div class=" tab-pane fade text-dark " id="Projects" role="tabpanel" aria-labelledby="projects">
+                hello world
+            </div>
+            <div class=" tab-pane fade text-dark " id="Policies" role="tabpanel" aria-labelledby="policies">
+                hello world
+            </div>
+            <div class=" tab-pane fade text-dark " id="Accounts" role="tabpanel" aria-labelledby="accounts">
+                hello world
+            </div>
+            <div class=" tab-pane fade text-dark " id="Payrolls" role="tabpanel" aria-labelledby="payrolls">
+                hello world
+            </div>
+            <div class=" tab-pane fade text-dark " id="Reports" role="tabpanel" aria-labelledby="reports">
+                hello world
+            </div>
+            <div class=" tab-pane fade text-dark " id="Settings" role="tabpanel" aria-labelledby="settings">
+                hello world
+            </div>
+          </div>
         </div>
         <div class="col-md-4 pl-5 col_color pr-5 pb-5">
           <!-- Attendence -->
@@ -192,11 +236,8 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript">
-    document.addEventListener("click", function(){
-  console.log(document.getElementById("home").style="color:blue");
-      });
-    </script>
+
+
     <script src="https://kit.fontawesome.com/0295f823fc.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
