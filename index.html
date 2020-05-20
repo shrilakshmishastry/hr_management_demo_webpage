@@ -91,22 +91,59 @@
         </div>
         <div  class="col-md-6  col_color">
           <div class="tab=content" id="tab-content" >
-            <div class=" tab-pane fade show active pl-3" id="dashboard" role="tabpanel" aria-labelledby="home">
-                <h4 class="font-weight-bold logo text-dark pt-4">
+            <div class=" tab-pane  fade show active pl-3" id="dashboard" role="tabpanel" aria-labelledby="home">
+                <h4 class="font-weight-bold  logo text-dark pt-4">
                     Welcome Eliza Hart!
                 </h4>
                 <p class="text-dark">
                   The salary of Kathryn Webster is pending since 15 December.
                   <a href="#" class="text-danger">Learn More</a>
                 </p>
-                <div class="row">
-                  <div class="col-md-6 bg-dark">
-                    <div class="card">
+                <div class="row pt-3">
+                  <div class="col-md-6 ">
+                    <div class="card shadow">
+                      <div class="pl-3 pr-3 pt-4 pb-4">
+                        <div class="d-flex flex-row">
+                          <h5 class="logo text-dark ">
+                            Total Employees
+                          </h5>
+                          <h4 class="logo text-dark ml-5">375</h4>
+                        </div>
+                        <div id="donutchart">
 
+                        </div>
+                        <div class="d-flex flex-row justify-content-center">
+                            <button type="button" name="button" class="a2 pl-4 pr-4 btn btn-outline-dark">
+                              <i class="fas fa-circle " style="color:#6672fb"></i>
+                              Male
+                            </button>
+                            <button type="button" name="button" class="a2 pl-4 pr-4 btn btn-outline-dark ml-3">
+                              <i class="fas fa-circle " style="color:red"></i>
+                              Female
+                            </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-6  bg-success">
-                    ddddddd
+                  <div class="col-md-6  ">
+                    <div class="card shadow pb-3 pt-1">
+                      <div class="pl-3 pr-3 pt-4 pb-4">
+                        <div class="d-flex flex-row">
+                          <h5 class="logo text-dark ">
+                            Total Projects
+                          </h5>
+                          <h4 class="logo text-dark ml-5 pl-5">90</h4>
+                        </div>
+                        <div class="d-flex flex-row text-dark">
+                          <small>Currently running
+                            <a  style="color:#6672fb" href="#">13 projects</a>
+                          </small>
+                        </div>
+                        <div id="candlestick">
+
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
             </div>
@@ -236,7 +273,63 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+    <script type="text/javascript">
+      google.charts.load("current",{packages:["corechart"]});
+       google.charts.setOnLoadCallback(candlestickDraw);
+      function candlestickDraw() {
+        var data = google.visualization.arrayToDataTable([
+          ['Jan',20,28,40,45],
+          ['Fab',25,35,50,55],
+          ['Mar',20,40,55,65],
+          ['Apr',10,35,60,70],
+          ['May',10,35,70,80],
+          ['Jun',34,56,78,89],
+          ['Jul',45,50,60,70],
+          ['Aug',35,67,80,70],
+          ['Sep',35,67,90,100],
+          ['Oct',58,88,10,23],
+          ['Nov',56,78,90,95],
+          ['Dec',57,80,95,100],
+
+        ],true);
+
+        var options = {
+          legend:'none'
+        }
+        var char1 = new google.visualization.CandlestickChart(document.getElementById('candlestick'));
+        char1.draw(data,options);
+      }
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Gender','Count'],
+          ['Male',267],
+          ['Female',108]
+        ]);
+
+        var options = {
+          pieHole:0.4,
+          legend:'none',
+
+           tooltip:{
+             textStyle: {
+               color: 'black',
+               fontSize:16
+             },
+           showColorCode: true,
+           ignoreBounds:true
+         }
+
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data,options);
+
+      }
+
+    </script>
 
     <script src="https://kit.fontawesome.com/0295f823fc.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
